@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "archives",
+  "info": {
+    "singularName": "archive",
+    "pluralName": "archives",
+    "displayName": "Archive",
+    "description": "Перенесені старі матеріали (Gemeindezeitung, JEZ, фото, відео)."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["document", "photo", "video"],
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "videos", "files"]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["Gemeindezeitung", "Veranstaltungen", "Fotos-Filmen"],
+      "required": false
+    }
+  }
+}
